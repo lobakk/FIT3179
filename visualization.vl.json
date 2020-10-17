@@ -18,6 +18,8 @@
       },
       "mark": {"type": "point", "tooltip": {"content": true}},
       "encoding": {
+        "x": {"field": "place","type": "qualitative"},
+        "y": {"field": "Mag","type": "quantitative"},
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
         "size": {
