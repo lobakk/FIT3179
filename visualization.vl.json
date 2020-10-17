@@ -16,7 +16,7 @@
       "data": {
         "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbol_map/data/earthquake.csv"
       },
-      "mark": {"type": "point", "tooltip": {"content": "data"}},
+      "mark": {"type": "point", "tooltip": {"content": true}},
       "encoding": {
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
