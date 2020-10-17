@@ -3,7 +3,7 @@
   "width": 800,
   "height": 500,
   "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
-  "projection": {"type": "equirectangular"},
+  "projection": {"type": "equalEarth"},
   "layer": [
     {
       "data": {
@@ -16,21 +16,19 @@
       "data": {
         "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbol_map/data/earthquake.csv"
       },
-      "mark": {"type": "point", "tooltip": {"content": true}},
+      "mark": {"type": "point", "tooltip": {"content": "data"}},
       "encoding": {
-        "x": {"field": "place","type": "qualitative"},
-        "y": {"field": "Mag","type": "quantitative"},
         "longitude": {"field": "longitude", "type": "quantitative"},
         "latitude": {"field": "latitude", "type": "quantitative"},
         "size": {
           "field": "mag",
           "type": "quantitative",
-          "scale": {"domain": [4, 8]}
+          "scale": {"domain": [4, 10]}
         },
         "color": {
           "field": "depth",
           "type": "quantitative",
-          "scale": {"scheme": "blues"}
+          "scale": {"scheme": "tealblues"}
         }
       }
     }
