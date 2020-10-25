@@ -1,8 +1,17 @@
-#vis {
-	top:100px;
-	bottom: 100px; 
+#bar_chart {
 	left: 100px;
 	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
+}
+
+#proportional_map {
+	left: 100px;
+	right: 100px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
 }
