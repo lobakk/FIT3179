@@ -1,0 +1,75 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+ "width": 500,
+ "height": 400,
+ "title": "Earthquakes of magnitude 4 or larger between 11 Sept 2020 and 11 Oct 2020",
+ "data": {
+ "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/2_symbol_map/data/earthquake.csv"
+ },
+ "params": [{
+ "name": "Depth",
+ "value": 0,
+ "bind": {
+ "input": "range",
+ "min": 0,
+ "max": 700,
+ "step": 1,
+ "name": "Depth: "
+ }
+ }],
+ "transform": [{"filter": "datum.depth > Depth"}],
+ "layer": [
+ {"mark": "bar",
+ "encoding": {
+ "x": {
+ "field": "time",
+ "timeUnit":"monthdate",
+ "type": "quantitative",
+ "title": "Date",
+ "scale": {"domain": [{"month": "Sept"}, {"month": "Nov"}]}
+ },
+ "y": {
+ "field": "mag",
+ "type": "quantitative",
+ "title": "Magnitude",
+ "scale": {"domain": [4.5,8]}
+ },
+ "color": {
+ "field": "place",
+ "type": "nominal"
+ },
+ "tooltip": [
+          {"field": "place", "type": "nominal"},
+          {"field": "mag", "type": "quantitative", "format": ","},
+          {"field": "time", "timeUnit": "yearmonthdate"}
+        ]
+ }},
+ {
+   "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "dy": -50,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "place", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['place'] == 'central Mid-Atlantic Ridge'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "place", "type": "nominal"},
+          {"field": "mag", "type": "quantitative", "format": ","},
+          {"field": "time", "timeUnit": "yearmonthdate"}
+        ]
+    }
+  }
+ ]
+}
