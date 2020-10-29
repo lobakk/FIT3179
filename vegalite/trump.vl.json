@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "#DonaldTrump and #Trump Twitter Mentions",
+  "width": 500, "height": 500,
+  "data": {"url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/hashtag_donaldtrump.csv"},
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "monthdate", "field": "created_at","title":"Date(2020)"
+    },
+    "y": {
+      "aggregate": "count", "field": "tweet","title":"Number of Tweets"
+    }
+  }
+}
