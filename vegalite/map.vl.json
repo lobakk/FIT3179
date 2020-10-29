@@ -1,1 +1,37 @@
-
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": null,
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/vegalite/usa.topojson",
+    "format": {"type": "topojson", "feature": "states"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/state_averages_and_predictions_topline.csv"
+        },
+        "key": "state",
+        "fields": ["projected_win_prob"]
+      }
+    },
+    {"calculate": "datum.projected_win_prob", "as": "win"}
+  ],
+  "projection": {"type": "equirectangular"},
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "win",
+      "type": "quantitative",
+      "scale": {"type": "linear", "scheme": "redblue"},
+      "legend": {"title": "probability"}
+    },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "State"},
+      {"field": "win", "type": "quantitative","title":"Winning Probability"}
+    ]
+  }
+}
