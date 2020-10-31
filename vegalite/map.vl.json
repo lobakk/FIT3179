@@ -20,7 +20,7 @@
     },
     {"calculate": "datum.projected_win_prob", "as": "win"}
   ],
-  "projection": {"type": "equirectangular"},
+  "projection": {"type": "albersUsa"},
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
@@ -31,7 +31,7 @@
     },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "State"},
-      {"field": "win", "type": "quantitative","title":"Winning Probability"}
+      {"field": "win", "type": "quantitative", "title": "Winning Probability"}
     ]
   }
 }
