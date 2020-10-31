@@ -16,25 +16,43 @@
 </head>
 <body>
 
-<h1>Earthquakes around the world above magnitude 4, September to October 2020</h1>
+<h1>US Election 2020 Statistics</h1>
 
-<h2>Proportional Symbol Map</h2>
-<div id="proportional_map"></div>
+<h2>Chances of winning</h2>
+<div id="choloropeth_map"></div>
 
-<h2>Stacked Bar Chart</h2>
-<div id="bar_chart"></div>
+<h2>Twitter mentions</h2>
+<div id="biden"></div>
+
+<h2>Electoral College Vote</h2>
+<div id="vote"></div>
+
+<h2>Electoral College Vote (Probability of Winning)</h2>
+<div id="prob"></div>
 
 <script type="text/javascript">
   
-  var vis1 = "https://lobakk.github.io/FIT3179/visualization.vl.json";
+  var vis1 = "https://lobakk.github.io/FIT3179/vegalite/map.vl.json";
   
-  vegaEmbed('#proportional_map', vis1).then(function(result) {
+  vegaEmbed('#choloropeth_map', vis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
   
-  var vis2 = "https://lobakk.github.io/FIT3179/barchart.vl.json";
+  var vis2 = "https://lobakk.github.io/FIT3179/vegalite/biden.vl.json";
   
-  vegaEmbed('#bar_chart', vis2).then(function(result) {
+  vegaEmbed('#biden', vis2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis3 = "https://lobakk.github.io/FIT3179/vegalite/electoralvote.vl.json";
+  
+  vegaEmbed('#vote', vis3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis4 = "https://lobakk.github.io/FIT3179/vegalite/electoralprob.vl.json";
+  
+  vegaEmbed('#prob', vis4).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>

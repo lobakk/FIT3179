@@ -1,11 +1,25 @@
-#bar_chart {
+#biden {
 	left: 100px;
 	right: 100px;
-	height: 1000px;
+	height: 550px;
 	width: 800px;
 }
 
-#proportional_map {
+#vote {
+	left: 100px;
+	right: 100px;
+	height: 70%;
+	width: 70%;
+}
+
+#prob {
+	left: 100px;
+	right: 100px;
+	height: 70%;
+	width: 70%;
+}
+
+#choloropeth_map {
 	left: 100px;
 	right: 100px;
 	height: 70%;

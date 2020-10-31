@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "description": "Electoral college vote.",
+  "data": {"url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/electoral_college_probability_over_time.csv"},
+  "transform": [{"calculate": "100*datum.win_prob","as":"whole_prob"}],
+  "layer":[{
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "date", "timeUnit": "month","title":"Month(2020)"},
+    "y": {"field": "whole_prob", "type": "quantitative","title":"vote"},
+    "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#FF0000", "#0000FF"]}},
+    "tooltip":[{"field":"whole_prob","title":"Probability of winning(%)"},
+                {"field":"date","type":"temporal"}]
+  }
+  },{
+      "data": {
+         "values": [{}]
+      },
+      "encoding": {
+        "y": {"datum": 50}
+      },
+      "layer": [{
+        "mark": "rule"
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "right",
+          "baseline": "bottom",
+          "dx": -2,
+          "dy": -2,
+          "x": "width",
+          "text": "50%"
+        }
+      }]
+    }
+  ]
+}
