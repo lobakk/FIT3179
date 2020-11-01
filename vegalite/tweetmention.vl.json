@@ -16,7 +16,7 @@
       "axis": null,
       "stack": "center"
     },
-    "color": {"field":"candidate", "scale": {"domain": ["trump", "biden"], "range": ["#bc373b", "#2c79b5"]}},
+    "color": {"field":"candidate", "scale": {"domain": ["trump", "biden"], "range": ["#8c0d25", "#134b84"]}},
     "tooltip":[{"field":"tweet_id","title":"Tweet mentions"},
                 {"field":"created_at","type":"temporal"}]
   }
