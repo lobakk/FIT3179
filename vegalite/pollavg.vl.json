@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+   "height": 300,
+   "background": null,
+  "data": { "url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/national_polling_averages_over_time.csv"},
+  "width": {"step": 20},
+  "transform": [{"calculate": "100*datum.poll_average_mean","as":"whole_prob"}],
+   "selection": {
+ "party_highlight": {
+ "type": "single",
+ "fields": ["party"],
+ "bind": "legend"
+ }
+ },
+  "mark": "bar",
+  "encoding": {
+    "column": {"timeUnit":"month",
+      "field": "date", "type": "temporal", "spacing": 10,"title":"2020"
+    },
+    "y": {
+      "aggregate": "min", "field": "whole_prob",
+      "title": "Polling Average(%)",
+      "axis": {"grid": false}
+    },
+    "x": {
+      "field": "party",
+      "axis": {"title": "","labels":false}
+    },
+    "color": {
+      "condition": {
+        "selection": "party_highlight",
+        "field": "party",
+        "type": "nominal",
+        "scale": {"domain": ["republican", "democratic"], "range": ["#8c0d25", "#134b84"]}
+      },
+      "value": "grey"
+    },
+    "tooltip":[{"field":"whole_prob","title":"National Polling Average(%)","format":".1f"},
+                {"field":"date","type":"temporal","format":"%b","title":"Month"}]
+  },
+  "config": {
+    "view": {"stroke": "transparent"},
+    "axis": {"domainWidth": 1}
+  }
+}
