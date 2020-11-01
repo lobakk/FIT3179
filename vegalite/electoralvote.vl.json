@@ -2,15 +2,15 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 300,
-  "background": null,
   "description": "Electoral college vote.",
   "data": {"url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/electoral_college_votes_over_time.csv"},
   "layer":[{
   "mark": "line",
   "encoding": {
-    "x": {"field": "date", "timeUnit": "monthdate","title":"Date(2020)"},
+    "x": {"field": "date", "timeUnit": "monthdate","title":"2020"},
     "y": {"field": "median_ev", "type": "quantitative","title":"vote"},
-    "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#FF0000", "#0000FF"]}},
+    "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#FF0000", "#0000FF"]}
+    },
     "tooltip":[{"field":"median_ev","title":"Electoral College Vote"},
                 {"field":"date","type":"temporal"}]
   }
@@ -31,7 +31,10 @@
           "dx": -2,
           "dy": -2,
           "x": "width",
-          "text": "270 votes to win"
+          "text": "270 votes to win",
+          "fontSize": 13,
+          "fontWeight":"bold",
+          "font":"sans-serif"
         }
       }]
     }
