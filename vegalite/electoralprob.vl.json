@@ -12,7 +12,7 @@
     "x": {"field": "date", "timeUnit": "monthdate","title":"2020"},
     "y": {"field": "whole_prob", "type": "quantitative","title":"probability(%)"},
     "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#8c0d25", "#134b84"]}},
-    "tooltip":[{"field":"whole_prob","title":"Probability of winning(%)"},
+    "tooltip":[{"field":"whole_prob","title":"Probability of winning(%)","format":".1f"},
                 {"field":"date","type":"temporal"}]
   }
   },{
