@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": null,
-  "width": 500,
-  "height": 300,
+  "width": 700,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/vegalite/usa.topojson",
     "format": {"type": "topojson", "feature": "states"}
