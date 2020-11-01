@@ -8,7 +8,7 @@
     "x": {
       "timeUnit": "monthdate", "field": "created_at",
       "axis": {"domain": false, "format": "%m-%d", "tickSize": 0},
-      "title":""
+      "title":"2020"
     },
     "y": {
       "aggregate": "sum",
@@ -16,7 +16,7 @@
       "axis": null,
       "stack": "center"
     },
-    "color": {"field":"candidate", "scale": {"domain": ["trump", "biden"], "range": ["#FF0000", "#0000FF"]}},
+    "color": {"field":"candidate", "scale": {"domain": ["trump", "biden"], "range": ["#bc373b", "#2c79b5"]}},
     "tooltip":[{"field":"tweet_id","title":"Tweet mentions"},
                 {"field":"created_at","type":"temporal"}]
   }
