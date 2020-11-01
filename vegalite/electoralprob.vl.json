@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 500,
   "height": 300,
-  "description": "Electoral college vote.",
+  "description": "Electoral college probability.",
   "background": null,
   "data": {"url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/electoral_college_probability_over_time.csv"},
   "transform": [{"calculate": "100*datum.win_prob","as":"whole_prob"}],
@@ -10,8 +10,8 @@
   "mark": "line",
   "encoding": {
     "x": {"field": "date", "timeUnit": "monthdate","title":"2020"},
-    "y": {"field": "whole_prob", "type": "quantitative","title":"vote"},
-    "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#FF0000", "#0000FF"]}},
+    "y": {"field": "whole_prob", "type": "quantitative","title":"probability(%)"},
+    "color": {"field": "party", "type": "nominal","scale": {"domain": ["republican", "democratic"], "range": ["#bc373b", "#2c79b5"]}},
     "tooltip":[{"field":"whole_prob","title":"Probability of winning(%)"},
                 {"field":"date","type":"temporal"}]
   }
@@ -32,7 +32,10 @@
           "dx": -2,
           "dy": -2,
           "x": "width",
-          "text": "50%"
+          "text": "50%",
+          "fontSize": 13,
+          "fontWeight":"bold",
+          "font":"sans-serif"
         }
       }]
     }
