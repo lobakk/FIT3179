@@ -19,7 +19,7 @@
         "fields": ["projected_win_prob"]
       }
     },
-    {"calculate": "datum.projected_win_prob", "as": "win"}
+    {"calculate": "datum.projected_win_prob*100", "as": "win"}
   ],
   "projection": {"type": "albersUsa"},
   "mark": {"type": "geoshape"},
@@ -28,11 +28,11 @@
       "field": "win",
       "type": "quantitative",
       "scale": {"type": "linear", "scheme": "redblue"},
-      "legend": {"title": "probability"}
+      "legend": {"title": "probability(%)"}
     },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "State"},
-      {"field": "win", "type": "quantitative", "title": "Winning Probability"}
+      {"field": "win", "type": "quantitative", "title": "Winning Probability","format":".1f"}
     ]
   }
 }
