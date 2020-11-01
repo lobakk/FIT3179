@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 600, "height": 400,
+  "width": 500, "height": 300,
   "data": {"url": "https://raw.githubusercontent.com/lobakk/FIT3179/main/Datasets/hashtag_us.csv"},
   "mark": "area",
   "encoding": {
