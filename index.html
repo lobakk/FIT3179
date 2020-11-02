@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>US Election 2020</title>
+  <title>Walkthrough on US Election 2020</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
@@ -20,7 +20,9 @@
     }
     h1{
       font-weight: 900;
+      font-size: 40px;
     }
+    
      body{
        background-color:rgba(240, 240, 236, 0.74);
      }
@@ -56,7 +58,7 @@
         font-size: 30px;
     }
     .trump {
-        border-radius: 100px;
+        border-radius: 50px;
         float: left;
         margin-left: 1em;
     }
@@ -64,33 +66,24 @@
     .trump-name{
         font-size: 30px;
         position: relative;
-        left: 10px;
+        left: 30px;
+        top: 10px;
+        color: #8c0d25;
     }
 
-    .trump-party{
-        font-size: 30px;
-        position: relative;
-        left: 50px;
-        bottom: 20px
-    }
 
     .biden {
         border-radius: 50px;
-        position: relative;
-        left: 200px;
+        float: left;
+        margin-left: 1em;
     }
 
     .biden-name{
         font-size: 30px;
         position: relative;
-        left: 230px;
-    }
-
-    .biden-party{
-        font-size: 30px;
-        position: relative;
-        left: 100px;
-        top: 100px
+        left: 30px;
+        top: 10px;
+        color: #134b84;
     }
 
     .container{
@@ -141,8 +134,9 @@
    <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1>A Walkthrough on U.S. Election 2020</h1>
+        <h3 style="font-size: 18px">The combined visualisations showed that <u>Biden</u> are more 
+            likely to win the 2020 presidential election which is on the 3rd of November.</h3>
       </div>
     </div>
   <!-- end pure grid group -->
@@ -152,18 +146,19 @@
       <div class="pure-u-1-2">
         <img width="80" height="80" alt="Trump&#x27;s avatar" class="trump" src="https://raw.githubusercontent.com/lobakk/FIT3179/main/png/599px-Trump_Circle.png">
         <div class="trump-name">
-            <p> <b> Donald Trump </b> Republican </p>
+            <b> Donald Trump </b> Republican </p>
         </div>
       </div>
-      <div class="pure-u-2-2">
+      <div class="pure-u-1-2">
         <img width="80" height="80" alt="Biden&#x27;s avatar" class="biden" src="https://raw.githubusercontent.com/lobakk/FIT3179/main/png/Biden.png">
         <div class="biden-name">
-            <b> Joe Biden </b>
+             <b> Joe Biden </b> 
         </div>
-      <div class="biden-party">
-          <p> Democratic </p>
+        <div class="biden-name">
+            <t> Democratic </t> 
+       </div>
       </div>
-      </div>
+      
   </div>
   <!-- end pure grid group -->
 
@@ -172,8 +167,14 @@
     <div class="pure-g">
         <div class="pure-u-1-3">
           <div class="description description-left">
-            <h2>This is the first section</h2>
-            <p>The first column is used for description while the next two columns are merged and used for visualisation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            <h2>Twitter Mentions for Both Candidates</h2>
+            <p style="font-size: 18px">Social media are known to be influencial over the U.S. political process.
+                Here shows the collection of mentions of both of the candidate on <b style="font-size: 20px">Twitter</b> from
+                <b style="font-size: 20px">October 15 2020</b> to 
+                <b style="font-size: 20px">October 25 2020.</b>
+                Notice the surge of mentions on <b style="font-size: 20px">October 23 2020</b>
+                for both parties, the <b style="font-size: 20px"><u>Presidential Debate</u></b> took place on that day.
+            </p>
           </div>
         </div>
         <div class="pure-u-2-3">
@@ -186,8 +187,10 @@
      <div class="pure-g">
         <div class="pure-u-1-1">
             <div class="description">
-            <h2>This is the second section</h2>
-            <p>Similar to the previous section, but the colum partition is swapped. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+            <h2>Chance of Winning (State)</h2>
+            <p style="font-size: 18px">This is the prediction of chances of winning for each state from The Economist. The model demonstrates that the closer to <b>100%</b>, chances for <b>Biden</b> to win it higher,
+                and contrary closer to <b>0%</b> means <b>Trump</b> has a higher chance to win.
+            Whereas closer to <b>50%</b> are the <b>unpredictable</b> or <b>neutral</b> state.</p>
         </div>
       </div>
     </div>
@@ -211,8 +214,14 @@
       
       <div class="pure-u-1-3">
         <div class="description description-right">
-          <h2>This is the third section</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+          <h2>Polling Average in Whole</h2>
+          <p style="font-size: 18px">
+                This is the collection of polling average collectively from March 2020 to Oct 2020 nationwide.
+                <p style="font-size: 18px">We could observed the decrease on the supporting rate for Trump starting from March, where the <b style="font-size:20px">COVID-19</b>
+                outbreak are starting the get out of control. </p>
+                <p style="font-size: 18px">As for June to July is where the social unrest <b style="font-size: 20px">#blacklivesmatter</b>
+                protest happened, this is when the supporting rate for Trump has drop significantly.</p>
+          </p>
         </div>
       </div>
     
@@ -231,8 +240,14 @@
     <div class="pure-g">
         <div class="pure-u-1-3">
             <div class="description description-left">
-              <h2>This is the fourth section</h2>
-              <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
+              <h2>Electoral College Votes</h2>
+              <p style="font-size: 18px">
+                  An <b style="font-size: 20px">electoral college</b> is a set of electors who are selected to elect a candidate
+                  to particular offices. Americans have to cast their ballots for the electors from their state.
+                  <p style="font-size: 18px">This time around there are <b style="font-size: 20px">538</b> electors and either of the candidates have to get
+                  <b style="font-size: 20px">270 votes or more</b> from the electors to win.</p>
+                  <p style="font-size: 18px">Here is the prediction for the electoral college votes and the probability of winning by the forecasted electoral college vote.</p>
+              </p>
             </div>
           </div>
 
